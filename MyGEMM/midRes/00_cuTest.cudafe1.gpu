@@ -1,0 +1,1824 @@
+typedef char __nv_bool;
+# 2797 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/driver_types.h"
+struct CUstream_st;
+# 55 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+enum cudaDataType_t {
+# 57 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_R_16F = 2,
+# 58 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_C_16F = 6,
+# 59 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_R_16BF = 14,
+# 60 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_C_16BF,
+# 61 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_R_32F = 0,
+# 62 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_C_32F = 4,
+# 63 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_R_64F = 1,
+# 64 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_C_64F = 5,
+# 65 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_R_4I = 16,
+# 66 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_C_4I,
+# 67 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_R_4U,
+# 68 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_C_4U,
+# 69 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_R_8I = 3,
+# 70 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_C_8I = 7,
+# 71 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_R_8U,
+# 72 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_C_8U,
+# 73 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_R_16I = 20,
+# 74 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_C_16I,
+# 75 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_R_16U,
+# 76 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_C_16U,
+# 77 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_R_32I = 10,
+# 78 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_C_32I,
+# 79 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_R_32U,
+# 80 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_C_32U,
+# 81 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_R_64I = 24,
+# 82 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_C_64I,
+# 83 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_R_64U,
+# 84 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_C_64U,
+# 85 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_R_8F_E4M3,
+# 86 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/library_types.h"
+CUDA_R_8F_E5M2};
+# 27 "/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h" 3
+struct __locale_struct;
+# 93 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+enum cublasStatus_t {
+# 94 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_STATUS_SUCCESS,
+# 95 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_STATUS_NOT_INITIALIZED,
+# 96 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_STATUS_ALLOC_FAILED = 3,
+# 97 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_STATUS_INVALID_VALUE = 7,
+# 98 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_STATUS_ARCH_MISMATCH,
+# 99 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_STATUS_MAPPING_ERROR = 11,
+# 100 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_STATUS_EXECUTION_FAILED = 13,
+# 101 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_STATUS_INTERNAL_ERROR,
+# 102 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_STATUS_NOT_SUPPORTED,
+# 103 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_STATUS_LICENSE_ERROR};
+# 112 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+enum cublasOperation_t {
+# 113 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_OP_N,
+# 114 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_OP_T,
+# 115 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_OP_C,
+# 116 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_OP_HERMITAN = 2,
+# 117 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_OP_CONJG};
+# 125 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+enum cublasGemmAlgo_t {
+# 126 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_DFALT = (-1),
+# 127 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_DEFAULT = (-1),
+# 128 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO0,
+# 129 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO1,
+# 130 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO2,
+# 131 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO3,
+# 132 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO4,
+# 133 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO5,
+# 134 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO6,
+# 135 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO7,
+# 136 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO8,
+# 137 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO9,
+# 138 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO10,
+# 139 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO11,
+# 140 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO12,
+# 141 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO13,
+# 142 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO14,
+# 143 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO15,
+# 144 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO16,
+# 145 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO17,
+# 146 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO18,
+# 147 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO19,
+# 148 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO20,
+# 149 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO21,
+# 150 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO22,
+# 151 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO23,
+# 152 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_DEFAULT_TENSOR_OP = 99,
+# 153 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_DFALT_TENSOR_OP = 99,
+# 154 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO0_TENSOR_OP,
+# 155 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO1_TENSOR_OP,
+# 156 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO2_TENSOR_OP,
+# 157 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO3_TENSOR_OP,
+# 158 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO4_TENSOR_OP,
+# 159 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO5_TENSOR_OP,
+# 160 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO6_TENSOR_OP,
+# 161 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO7_TENSOR_OP,
+# 162 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO8_TENSOR_OP,
+# 163 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO9_TENSOR_OP,
+# 164 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO10_TENSOR_OP,
+# 165 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO11_TENSOR_OP,
+# 166 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO12_TENSOR_OP,
+# 167 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO13_TENSOR_OP,
+# 168 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO14_TENSOR_OP,
+# 169 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_GEMM_ALGO15_TENSOR_OP};
+# 173 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+enum cublasMath_t {
+# 174 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_DEFAULT_MATH,
+# 177 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_TENSOR_OP_MATH,
+# 181 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_PEDANTIC_MATH,
+# 184 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_TF32_TENSOR_OP_MATH,
+# 188 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_MATH_DISALLOW_REDUCED_PRECISION_REDUCTION = 16};
+# 201 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+enum cublasComputeType_t {
+# 202 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_COMPUTE_16F = 64,
+# 203 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_COMPUTE_16F_PEDANTIC,
+# 204 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_COMPUTE_32F = 68,
+# 205 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_COMPUTE_32F_PEDANTIC,
+# 206 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_COMPUTE_32F_FAST_16F = 74,
+# 207 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_COMPUTE_32F_FAST_16BF,
+# 208 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_COMPUTE_32F_FAST_TF32 = 77,
+# 209 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_COMPUTE_64F = 70,
+# 210 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_COMPUTE_64F_PEDANTIC,
+# 211 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_COMPUTE_32I,
+# 212 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+CUBLAS_COMPUTE_32I_PEDANTIC};
+# 216 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+struct cublasContext;
+# 177 "/usr/include/c++/11/bits/basic_string.h" 3
+enum _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEUt_E {
+# 177 "/usr/include/c++/11/bits/basic_string.h" 3
+_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE17_S_local_capacityE = 15};
+# 177 "/usr/include/c++/11/bits/basic_string.h" 3
+enum _ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEUt_E {
+# 177 "/usr/include/c++/11/bits/basic_string.h" 3
+_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE17_S_local_capacityE = 3};
+# 177 "/usr/include/c++/11/bits/basic_string.h" 3
+enum _ZNSt7__cxx1112basic_stringIDsSt11char_traitsIDsESaIDsEEUt_E {
+# 177 "/usr/include/c++/11/bits/basic_string.h" 3
+_ZNSt7__cxx1112basic_stringIDsSt11char_traitsIDsESaIDsEE17_S_local_capacityE = 7};
+# 177 "/usr/include/c++/11/bits/basic_string.h" 3
+enum _ZNSt7__cxx1112basic_stringIDiSt11char_traitsIDiESaIDiEEUt_E {
+# 177 "/usr/include/c++/11/bits/basic_string.h" 3
+_ZNSt7__cxx1112basic_stringIDiSt11char_traitsIDiESaIDiEE17_S_local_capacityE = 3};
+# 112 "/usr/include/c++/11/bits/random.h" 3
+struct _ZNSt8__detail4_ModImLm2147483647ELm1ELm0ELb1ELb1EEE;
+# 164 "/usr/include/c++/11/bits/random.h" 3
+struct _ZNSt8__detail8_AdaptorISt26linear_congruential_engineImLm16807ELm0ELm2147483647EEfEE;
+# 112 "/usr/include/c++/11/bits/random.h" 3
+struct _ZNSt8__detail4_ModImLm2147483647ELm16807ELm0ELb1ELb1EEE;
+# 533 "/usr/include/c++/11/bits/cpp_type_traits.h" 3
+struct _ZSt24__is_memcmp_ordered_withISt4byteS0_Lb1EE;
+# 80 "/usr/include/c++/11/bits/stl_pair.h" 3
+struct _ZSt21piecewise_construct_t;
+# 167 "/usr/include/c++/11/limits" 3
+enum _ZSt17float_round_style {
+# 169 "/usr/include/c++/11/limits" 3
+_ZSt19round_indeterminate = (-1),
+# 170 "/usr/include/c++/11/limits" 3
+_ZSt17round_toward_zero,
+# 171 "/usr/include/c++/11/limits" 3
+_ZSt16round_to_nearest,
+# 172 "/usr/include/c++/11/limits" 3
+_ZSt21round_toward_infinity,
+# 173 "/usr/include/c++/11/limits" 3
+_ZSt25round_toward_neg_infinity};
+# 182 "/usr/include/c++/11/limits" 3
+enum _ZSt18float_denorm_style {
+# 185 "/usr/include/c++/11/limits" 3
+_ZSt20denorm_indeterminate = (-1),
+# 187 "/usr/include/c++/11/limits" 3
+_ZSt13denorm_absent,
+# 189 "/usr/include/c++/11/limits" 3
+_ZSt14denorm_present};
+# 202 "/usr/include/c++/11/limits" 3
+struct _ZSt21__numeric_limits_base;
+# 384 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIbE;
+# 453 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIcE;
+# 520 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIaE;
+# 590 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIhE;
+# 663 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIwE;
+# 797 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIDsE;
+# 858 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIDiE;
+# 920 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIsE;
+# 987 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsItE;
+# 1060 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIiE;
+# 1127 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIjE;
+# 1199 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIlE;
+# 1266 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsImE;
+# 1339 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIxE;
+# 1409 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIyE;
+# 1635 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsInE;
+# 1635 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIoE;
+# 1668 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIfE;
+# 1743 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIdE;
+# 1818 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIeE;
+# 352 "/usr/include/c++/11/utility" 3
+struct _ZSt10in_place_t;
+# 344 "/usr/include/c++/11/bits/char_traits.h" 3
+struct _ZSt11char_traitsIcE;
+# 373 "/usr/include/c++/11/bits/locale_classes.h" 3
+struct _ZNSt6locale5facetE;
+# 373 "/usr/include/c++/11/bits/locale_classes.h" 3
+struct __SO__NSt6locale5facetE;
+# 524 "/usr/include/c++/11/bits/locale_classes.h" 3
+struct _ZNSt6locale5_ImplE;
+# 62 "/usr/include/c++/11/bits/locale_classes.h" 3
+struct _ZSt6locale;
+# 57 "/usr/include/c++/11/bits/ios_base.h" 3
+enum _ZSt13_Ios_Fmtflags {
+# 59 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt12_S_boolalpha = 1,
+# 60 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt6_S_dec,
+# 61 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt8_S_fixed = 4,
+# 62 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt6_S_hex = 8,
+# 63 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt11_S_internal = 16,
+# 64 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt7_S_left = 32,
+# 65 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt6_S_oct = 64,
+# 66 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt8_S_right = 128,
+# 67 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt13_S_scientific = 256,
+# 68 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt11_S_showbase = 512,
+# 69 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt12_S_showpoint = 1024,
+# 70 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt10_S_showpos = 2048,
+# 71 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt9_S_skipws = 4096,
+# 72 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt10_S_unitbuf = 8192,
+# 73 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt12_S_uppercase = 16384,
+# 74 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt14_S_adjustfield = 176,
+# 75 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt12_S_basefield = 74,
+# 76 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt13_S_floatfield = 260,
+# 77 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt19_S_ios_fmtflags_end = 65536,
+# 78 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt19_S_ios_fmtflags_max = 2147483647,
+# 79 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt19_S_ios_fmtflags_min = (-2147483647-1)};
+# 111 "/usr/include/c++/11/bits/ios_base.h" 3
+enum _ZSt13_Ios_Openmode {
+# 113 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt6_S_app = 1,
+# 114 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt6_S_ate,
+# 115 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt6_S_bin = 4,
+# 116 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt5_S_in = 8,
+# 117 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt6_S_out = 16,
+# 118 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt8_S_trunc = 32,
+# 119 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt19_S_ios_openmode_end = 65536,
+# 120 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt19_S_ios_openmode_max = 2147483647,
+# 121 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt19_S_ios_openmode_min = (-2147483647-1)};
+# 153 "/usr/include/c++/11/bits/ios_base.h" 3
+enum _ZSt12_Ios_Iostate {
+# 155 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt10_S_goodbit,
+# 156 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt9_S_badbit,
+# 157 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt9_S_eofbit,
+# 158 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt10_S_failbit = 4,
+# 159 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt18_S_ios_iostate_end = 65536,
+# 160 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt18_S_ios_iostate_max = 2147483647,
+# 161 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt18_S_ios_iostate_min = (-2147483647-1)};
+# 193 "/usr/include/c++/11/bits/ios_base.h" 3
+enum _ZSt12_Ios_Seekdir {
+# 195 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt6_S_beg,
+# 196 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt6_S_cur,
+# 197 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt6_S_end,
+# 198 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt18_S_ios_seekdir_end = 65536};
+# 553 "/usr/include/c++/11/bits/ios_base.h" 3
+struct _ZNSt8ios_base14_Callback_listE;
+# 592 "/usr/include/c++/11/bits/ios_base.h" 3
+struct _ZNSt8ios_base6_WordsE;
+# 604 "/usr/include/c++/11/bits/ios_base.h" 3
+enum _ZNSt8ios_baseUt_E {
+# 604 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZNSt8ios_base18_S_local_word_sizeE = 8};
+# 626 "/usr/include/c++/11/bits/ios_base.h" 3
+struct _ZNSt8ios_base4InitE;
+# 228 "/usr/include/c++/11/bits/ios_base.h" 3
+struct _ZSt8ios_base;
+# 451 "/usr/include/c++/11/bits/stl_algobase.h" 3
+struct _ZSt19istreambuf_iteratorIcSt11char_traitsIcEE;
+# 454 "/usr/include/c++/11/bits/stl_algobase.h" 3
+struct _ZSt19ostreambuf_iteratorIcSt11char_traitsIcEE;
+# 80 "/usr/include/c++/11/iosfwd" 3
+struct _ZSt15basic_streambufIcSt11char_traitsIcEE;
+# 41 "/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h" 3
+struct _ZSt10ctype_base;
+# 684 "/usr/include/c++/11/bits/locale_facets.h" 3
+struct _ZSt5ctypeIcE;
+# 1554 "/usr/include/c++/11/bits/locale_facets.h" 3
+enum _ZNSt10__num_baseUt_E {
+# 1555 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base9_S_ominusE,
+# 1556 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base8_S_oplusE,
+# 1557 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base5_S_oxE,
+# 1558 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base5_S_oXE,
+# 1559 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base10_S_odigitsE,
+# 1560 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base14_S_odigits_endE = 20,
+# 1561 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base11_S_oudigitsE = 20,
+# 1562 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base15_S_oudigits_endE = 36,
+# 1563 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base5_S_oeE = 18,
+# 1564 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base5_S_oEE = 34,
+# 1565 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base7_S_oendE = 36};
+# 1580 "/usr/include/c++/11/bits/locale_facets.h" 3
+enum _ZNSt10__num_baseUt0_E {
+# 1581 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base9_S_iminusE,
+# 1582 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base8_S_iplusE,
+# 1583 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base5_S_ixE,
+# 1584 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base5_S_iXE,
+# 1585 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base8_S_izeroE,
+# 1586 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base5_S_ieE = 18,
+# 1587 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base5_S_iEE = 24,
+# 1588 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10__num_base7_S_iendE = 26};
+# 1955 "/usr/include/c++/11/bits/locale_facets.h" 3
+struct _ZSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE;
+# 2313 "/usr/include/c++/11/bits/locale_facets.h" 3
+struct _ZSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE;
+# 77 "/usr/include/c++/11/iosfwd" 3
+struct _ZSt9basic_iosIcSt11char_traitsIcEE;
+# 86 "/usr/include/c++/11/iosfwd" 3
+struct _ZSo;
+# 255 "/usr/include/c++/11/bits/random.h" 3
+struct _ZSt26linear_congruential_engineImLm16807ELm0ELm2147483647EE;
+# 1752 "/usr/include/c++/11/bits/random.h" 3
+struct _ZNSt25uniform_real_distributionIfE10param_typeE;
+# 1742 "/usr/include/c++/11/bits/random.h" 3
+struct _ZSt25uniform_real_distributionIfE;
+# 90 "/usr/include/c++/11/bits/char_traits.h" 3
+struct _ZN9__gnu_cxx11char_traitsIcEE;
+# 88 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/nv/target"
+enum _ZN2nv6target6detail11sm_selectorE {
+# 89 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/nv/target"
+_ZN2nv6target6detail11sm_selector5sm_35E = 35ULL,
+# 89 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/nv/target"
+_ZN2nv6target6detail11sm_selector5sm_37E = 37ULL,
+# 90 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/nv/target"
+_ZN2nv6target6detail11sm_selector5sm_50E = 50ULL,
+# 90 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/nv/target"
+_ZN2nv6target6detail11sm_selector5sm_52E = 52ULL,
+# 90 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/nv/target"
+_ZN2nv6target6detail11sm_selector5sm_53E,
+# 91 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/nv/target"
+_ZN2nv6target6detail11sm_selector5sm_60E = 60ULL,
+# 91 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/nv/target"
+_ZN2nv6target6detail11sm_selector5sm_61E,
+# 91 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/nv/target"
+_ZN2nv6target6detail11sm_selector5sm_62E,
+# 92 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/nv/target"
+_ZN2nv6target6detail11sm_selector5sm_70E = 70ULL,
+# 92 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/nv/target"
+_ZN2nv6target6detail11sm_selector5sm_72E = 72ULL,
+# 92 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/nv/target"
+_ZN2nv6target6detail11sm_selector5sm_75E = 75ULL,
+# 93 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/nv/target"
+_ZN2nv6target6detail11sm_selector5sm_80E = 80ULL,
+# 93 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/nv/target"
+_ZN2nv6target6detail11sm_selector5sm_86E = 86ULL,
+# 93 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/nv/target"
+_ZN2nv6target6detail11sm_selector5sm_87E,
+# 94 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/nv/target"
+_ZN2nv6target6detail11sm_selector5sm_89E = 89ULL,
+# 94 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/nv/target"
+_ZN2nv6target6detail11sm_selector5sm_90E};
+# 209 "/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h" 3
+typedef unsigned long size_t;
+#include "crt/device_runtime.h"
+# 41 "/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h" 3
+typedef struct __locale_struct *__locale_t;
+# 42 "/usr/include/x86_64-linux-gnu/bits/types.h" 3
+typedef unsigned __uint32_t;
+# 57 "/usr/include/x86_64-linux-gnu/bits/types.h" 3
+typedef __uint32_t __uint_least32_t;
+# 160 "/usr/include/x86_64-linux-gnu/bits/types.h" 3
+typedef long __time_t;
+# 10 "/usr/include/x86_64-linux-gnu/bits/types/time_t.h" 3
+typedef __time_t time_t;
+# 51 "/usr/include/stdint.h" 3
+typedef __uint_least32_t uint_least32_t;
+# 74 "/usr/include/stdint.h" 3
+typedef unsigned long uint_fast32_t;
+# 75 "/usr/include/stdint.h" 3
+typedef unsigned long uint_fast64_t;
+# 32 "/usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h" 3
+typedef int _Atomic_word;
+# 104 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+typedef enum cublasStatus_t cublasStatus_t;
+# 118 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+typedef enum cublasOperation_t cublasOperation_t;
+# 217 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+typedef struct cublasContext *cublasHandle_t;
+# 280 "/usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h" 3
+typedef unsigned long _ZSt6size_t;
+# 112 "/usr/include/c++/11/bits/random.h" 3
+struct _ZNSt8__detail4_ModImLm2147483647ELm1ELm0ELb1ELb1EEE {};
+# 1556 "/usr/include/c++/11/bits/random.h" 3
+typedef struct _ZSt26linear_congruential_engineImLm16807ELm0ELm2147483647EE _ZSt12minstd_rand0;
+# 1604 "/usr/include/c++/11/bits/random.h" 3
+typedef _ZSt12minstd_rand0 _ZSt21default_random_engine;
+# 164 "/usr/include/c++/11/bits/random.h" 3
+struct _ZNSt8__detail8_AdaptorISt26linear_congruential_engineImLm16807ELm0ELm2147483647EEfEE {
+# 195 "/usr/include/c++/11/bits/random.h" 3
+_ZSt21default_random_engine *_M_g;};
+# 112 "/usr/include/c++/11/bits/random.h" 3
+struct _ZNSt8__detail4_ModImLm2147483647ELm16807ELm0ELb1ELb1EEE {};
+# 281 "/usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h" 3
+typedef long _ZSt9ptrdiff_t;
+# 284 "/usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h" 3
+typedef void *_ZSt9nullptr_t;
+# 533 "/usr/include/c++/11/bits/cpp_type_traits.h" 3
+struct _ZSt24__is_memcmp_ordered_withISt4byteS0_Lb1EE {};
+# 80 "/usr/include/c++/11/bits/stl_pair.h" 3
+struct _ZSt21piecewise_construct_t {};
+# 202 "/usr/include/c++/11/limits" 3
+struct _ZSt21__numeric_limits_base {};
+# 384 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIbE {};
+# 453 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIcE {};
+# 520 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIaE {};
+# 590 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIhE {};
+# 663 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIwE {};
+# 797 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIDsE {};
+# 858 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIDiE {};
+# 920 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIsE {};
+# 987 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsItE {};
+# 1060 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIiE {};
+# 1127 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIjE {};
+# 1199 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIlE {};
+# 1266 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsImE {};
+# 1339 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIxE {};
+# 1409 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIyE {};
+# 1635 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsInE {};
+# 1635 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIoE {};
+# 1668 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIfE {};
+# 1743 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIdE {};
+# 1818 "/usr/include/c++/11/limits" 3
+struct _ZSt14numeric_limitsIeE {};
+# 352 "/usr/include/c++/11/utility" 3
+struct _ZSt10in_place_t {};
+# 98 "/usr/include/c++/11/bits/postypes.h" 3
+typedef _ZSt9ptrdiff_t _ZSt10streamsize;
+# 141 "/usr/include/c++/11/iosfwd" 3
+typedef struct _ZSo _ZSt7ostream;
+# 346 "/usr/include/c++/11/bits/char_traits.h" 3
+typedef char _ZNSt11char_traitsIcE9char_typeE;
+# 344 "/usr/include/c++/11/bits/char_traits.h" 3
+struct _ZSt11char_traitsIcE {};
+# 62 "/usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h" 3
+typedef __locale_t _ZSt10__c_locale;
+# 373 "/usr/include/c++/11/bits/locale_classes.h" 3
+struct _ZNSt6locale5facetE { const long *__vptr;
+# 379 "/usr/include/c++/11/bits/locale_classes.h" 3
+_Atomic_word _M_refcount;char __nv_no_debug_dummy_end_padding_0[4];};
+# 373 "/usr/include/c++/11/bits/locale_classes.h" 3
+struct __SO__NSt6locale5facetE { const long *__vptr;
+# 379 "/usr/include/c++/11/bits/locale_classes.h" 3
+_Atomic_word _M_refcount;};
+# 62 "/usr/include/c++/11/bits/locale_classes.h" 3
+struct _ZSt6locale {
+# 311 "/usr/include/c++/11/bits/locale_classes.h" 3
+struct _ZNSt6locale5_ImplE *_M_impl;};
+# 341 "/usr/include/c++/11/bits/ios_base.h" 3
+typedef enum _ZSt13_Ios_Fmtflags _ZNSt8ios_base8fmtflagsE;
+# 416 "/usr/include/c++/11/bits/ios_base.h" 3
+typedef enum _ZSt12_Ios_Iostate _ZNSt8ios_base7iostateE;
+# 479 "/usr/include/c++/11/bits/ios_base.h" 3
+typedef enum _ZSt12_Ios_Seekdir _ZNSt8ios_base7seekdirE;
+# 592 "/usr/include/c++/11/bits/ios_base.h" 3
+struct _ZNSt8ios_base6_WordsE {
+# 594 "/usr/include/c++/11/bits/ios_base.h" 3
+void *_M_pword;
+# 595 "/usr/include/c++/11/bits/ios_base.h" 3
+long _M_iword;};
+# 626 "/usr/include/c++/11/bits/ios_base.h" 3
+struct _ZNSt8ios_base4InitE {};
+# 228 "/usr/include/c++/11/bits/ios_base.h" 3
+struct _ZSt8ios_base { const long *__vptr;
+# 545 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt10streamsize _M_precision;
+# 546 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZSt10streamsize _M_width;
+# 547 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZNSt8ios_base8fmtflagsE _M_flags;
+# 548 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZNSt8ios_base7iostateE _M_exception;
+# 549 "/usr/include/c++/11/bits/ios_base.h" 3
+_ZNSt8ios_base7iostateE _M_streambuf_state;
+# 583 "/usr/include/c++/11/bits/ios_base.h" 3
+struct _ZNSt8ios_base14_Callback_listE *_M_callbacks;
+# 600 "/usr/include/c++/11/bits/ios_base.h" 3
+struct _ZNSt8ios_base6_WordsE _M_word_zero;
+# 605 "/usr/include/c++/11/bits/ios_base.h" 3
+struct _ZNSt8ios_base6_WordsE _M_local_word[8];
+# 608 "/usr/include/c++/11/bits/ios_base.h" 3
+int _M_word_size;
+# 609 "/usr/include/c++/11/bits/ios_base.h" 3
+struct _ZNSt8ios_base6_WordsE *_M_word;
+# 615 "/usr/include/c++/11/bits/ios_base.h" 3
+struct _ZSt6locale _M_ios_locale;};
+# 131 "/usr/include/c++/11/streambuf" 3
+typedef char _ZNSt15basic_streambufIcSt11char_traitsIcEE9char_typeE;
+# 132 "/usr/include/c++/11/streambuf" 3
+typedef struct _ZSt11char_traitsIcE _ZNSt15basic_streambufIcSt11char_traitsIcEE11traits_typeE;
+# 80 "/usr/include/c++/11/iosfwd" 3
+struct _ZSt15basic_streambufIcSt11char_traitsIcEE { const long *__vptr;
+# 189 "/usr/include/c++/11/streambuf" 3
+_ZNSt15basic_streambufIcSt11char_traitsIcEE9char_typeE *_M_in_beg;
+# 190 "/usr/include/c++/11/streambuf" 3
+_ZNSt15basic_streambufIcSt11char_traitsIcEE9char_typeE *_M_in_cur;
+# 191 "/usr/include/c++/11/streambuf" 3
+_ZNSt15basic_streambufIcSt11char_traitsIcEE9char_typeE *_M_in_end;
+# 192 "/usr/include/c++/11/streambuf" 3
+_ZNSt15basic_streambufIcSt11char_traitsIcEE9char_typeE *_M_out_beg;
+# 193 "/usr/include/c++/11/streambuf" 3
+_ZNSt15basic_streambufIcSt11char_traitsIcEE9char_typeE *_M_out_cur;
+# 194 "/usr/include/c++/11/streambuf" 3
+_ZNSt15basic_streambufIcSt11char_traitsIcEE9char_typeE *_M_out_end;
+# 197 "/usr/include/c++/11/streambuf" 3
+struct _ZSt6locale _M_buf_locale;};
+# 44 "/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h" 3
+typedef const int *_ZNSt10ctype_base9__to_typeE;
+# 48 "/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h" 3
+typedef unsigned short _ZNSt10ctype_base4maskE;
+# 41 "/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h" 3
+struct _ZSt10ctype_base {};
+# 689 "/usr/include/c++/11/bits/locale_facets.h" 3
+typedef char _ZNSt5ctypeIcE9char_typeE;
+# 684 "/usr/include/c++/11/bits/locale_facets.h" 3
+struct _ZSt5ctypeIcE {  const long *__b_NSt6locale5facetE___vptr;
+# 379 "/usr/include/c++/11/bits/locale_classes.h" 3
+_Atomic_word __b_NSt6locale5facetE__M_refcount;
+# 693 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZSt10__c_locale _M_c_locale_ctype;
+# 694 "/usr/include/c++/11/bits/locale_facets.h" 3
+__nv_bool _M_del;
+# 695 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10ctype_base9__to_typeE _M_toupper;
+# 696 "/usr/include/c++/11/bits/locale_facets.h" 3
+_ZNSt10ctype_base9__to_typeE _M_tolower;
+# 697 "/usr/include/c++/11/bits/locale_facets.h" 3
+const _ZNSt10ctype_base4maskE *_M_table;
+# 698 "/usr/include/c++/11/bits/locale_facets.h" 3
+char _M_widen_ok;
+# 699 "/usr/include/c++/11/bits/locale_facets.h" 3
+char _M_widen[256];
+# 700 "/usr/include/c++/11/bits/locale_facets.h" 3
+char _M_narrow[256];
+# 701 "/usr/include/c++/11/bits/locale_facets.h" 3
+char _M_narrow_ok;char __nv_no_debug_dummy_end_padding_0[6];};
+# 76 "/usr/include/c++/11/bits/basic_ios.h" 3
+typedef char _ZNSt9basic_iosIcSt11char_traitsIcEE9char_typeE;
+# 87 "/usr/include/c++/11/bits/basic_ios.h" 3
+typedef struct _ZSt5ctypeIcE _ZNSt9basic_iosIcSt11char_traitsIcEE12__ctype_typeE;
+# 89 "/usr/include/c++/11/bits/basic_ios.h" 3
+typedef struct _ZSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE _ZNSt9basic_iosIcSt11char_traitsIcEE14__num_put_typeE;
+# 91 "/usr/include/c++/11/bits/basic_ios.h" 3
+typedef struct _ZSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE _ZNSt9basic_iosIcSt11char_traitsIcEE14__num_get_typeE;
+# 77 "/usr/include/c++/11/iosfwd" 3
+struct _ZSt9basic_iosIcSt11char_traitsIcEE { struct _ZSt8ios_base __b_St8ios_base;
+# 96 "/usr/include/c++/11/bits/basic_ios.h" 3
+struct _ZSo *_M_tie;
+# 97 "/usr/include/c++/11/bits/basic_ios.h" 3
+_ZNSt9basic_iosIcSt11char_traitsIcEE9char_typeE _M_fill;
+# 98 "/usr/include/c++/11/bits/basic_ios.h" 3
+__nv_bool _M_fill_init;
+# 99 "/usr/include/c++/11/bits/basic_ios.h" 3
+struct _ZSt15basic_streambufIcSt11char_traitsIcEE *_M_streambuf;
+# 102 "/usr/include/c++/11/bits/basic_ios.h" 3
+const _ZNSt9basic_iosIcSt11char_traitsIcEE12__ctype_typeE *_M_ctype;
+# 104 "/usr/include/c++/11/bits/basic_ios.h" 3
+const _ZNSt9basic_iosIcSt11char_traitsIcEE14__num_put_typeE *_M_num_put;
+# 106 "/usr/include/c++/11/bits/basic_ios.h" 3
+const _ZNSt9basic_iosIcSt11char_traitsIcEE14__num_get_typeE *_M_num_get;};
+# 62 "/usr/include/c++/11/ostream" 3
+typedef char _ZNSo9char_typeE;
+# 71 "/usr/include/c++/11/ostream" 3
+typedef struct _ZSo _ZNSo14__ostream_typeE;
+# 86 "/usr/include/c++/11/iosfwd" 3
+struct _ZSo { const long *__vptr; struct _ZSt9basic_iosIcSt11char_traitsIcEE __v_St9basic_iosIcSt11char_traitsIcEE;};
+# 268 "/usr/include/c++/11/bits/random.h" 3
+typedef uint_fast32_t _ZNSt26linear_congruential_engineImLm16807ELm0ELm2147483647EE11result_typeE;
+# 255 "/usr/include/c++/11/bits/random.h" 3
+struct _ZSt26linear_congruential_engineImLm16807ELm0ELm2147483647EE {
+# 416 "/usr/include/c++/11/bits/random.h" 3
+uint_fast32_t _M_x;};
+# 1749 "/usr/include/c++/11/bits/random.h" 3
+typedef float _ZNSt25uniform_real_distributionIfE11result_typeE;
+# 1752 "/usr/include/c++/11/bits/random.h" 3
+struct _ZNSt25uniform_real_distributionIfE10param_typeE {
+# 1782 "/usr/include/c++/11/bits/random.h" 3
+float _M_a;
+# 1783 "/usr/include/c++/11/bits/random.h" 3
+float _M_b;};
+# 1742 "/usr/include/c++/11/bits/random.h" 3
+struct _ZSt25uniform_real_distributionIfE {
+# 1912 "/usr/include/c++/11/bits/random.h" 3
+struct _ZNSt25uniform_real_distributionIfE10param_typeE _M_param;};
+# 92 "/usr/include/c++/11/bits/char_traits.h" 3
+typedef _ZNSt11char_traitsIcE9char_typeE _ZN9__gnu_cxx11char_traitsIcE9char_typeE;
+# 90 "/usr/include/c++/11/bits/char_traits.h" 3
+struct _ZN9__gnu_cxx11char_traitsIcEE {};
+# 157 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/crt/common_functions.h"
+___device__(extern  __no_sc__) __attribute__((__alloc_size__(1))) __attribute__((__malloc__)) __attribute__((__nothrow__)) void *malloc(size_t);
+# 158 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/crt/common_functions.h"
+___device__(extern  __no_sc__) __attribute__((__nothrow__)) void free(void *);
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+# 109 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) __inline__ enum cudaError __cudaCDP2Malloc(void **, size_t);
+# 239 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(extern  __no_sc__) enum cudaError __cudaCDP2GetLastError(void);
+# 241 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(extern  __no_sc__) const char *__cudaCDP2GetErrorString(enum cudaError);
+# 256 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(extern  __no_sc__) enum cudaError __cudaCDP2Free(void *);
+# 378 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) __inline__ enum cudaError _ZN43_INTERNAL_8af6a8fc_12_00_cuTest_cu_a311767b16cudaGetLastErrorEv(void);
+# 388 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) __inline__ const char *_ZN43_INTERNAL_8af6a8fc_12_00_cuTest_cu_a311767b18cudaGetErrorStringE9cudaError(enum cudaError);
+# 463 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) __inline__ enum cudaError _ZN43_INTERNAL_8af6a8fc_12_00_cuTest_cu_a311767b8cudaFreeEPv(void *);
+# 468 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) __inline__ enum cudaError _ZN43_INTERNAL_8af6a8fc_12_00_cuTest_cu_a311767b10cudaMallocEPPvm(void **, size_t);
+#if !defined(__CUDABE__)
+# 96 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/crt/common_functions.h"
+ __device_builtin__ ___device__(extern  __no_sc__) __attribute__((__nothrow__)) void *memset(void *, int, size_t);
+#endif
+#if !defined(__CUDABE__)
+# 153 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/crt/common_functions.h"
+ __device_builtin__ ___device__(extern  __no_sc__) int printf(const char *__restrict__, ...);
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+# 169 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/crt/device_functions.h"
+ __device_builtin__ ___device__(extern  __no_sc__) void __syncthreads(void);
+#endif
+# 3634 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/crt/device_functions.h"
+___device__(extern  __no_sc__) unsigned __cudaPushCallConfiguration(struct dim3, struct dim3, size_t, struct CUstream_st *);
+# 730 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+___device__(static  __no_sc__) __inline__ enum cudaError _ZN43_INTERNAL_8af6a8fc_12_00_cuTest_cu_a311767b10cudaMallocIfEE9cudaErrorPPT_m(float **, size_t);
+# 226 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+___device__(extern  __no_sc__) cublasStatus_t cublasCreate_v2(cublasHandle_t *);
+# 228 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+___device__(extern  __no_sc__) cublasStatus_t cublasDestroy_v2(cublasHandle_t);
+# 3048 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cublas_api.h"
+___device__(extern  __no_sc__) cublasStatus_t cublasSgemm_v2(cublasHandle_t, cublasOperation_t, cublasOperation_t, int, int, int, const float *, const float *, int, const float *, int, const float *, float *, int);
+# 19 "../Common.cuh"
+__global__ __var_used__ extern void _Z6vecAddPfS_S_(float *, float *, float *);
+# 79 "00_cuTest.cu"
+__global__ __var_used__ extern void _Z9SGEMM_v26PfS_S_(float *, float *, float *);
+# 241 "/usr/include/c++/11/cmath" 3
+___device__(static  __no_sc__) __inline__ __attribute__((visibility("default"))) float _ZSt4fabsf(float);
+# 1660 "/usr/include/c++/11/cmath" 3
+___device__(static  __no_sc__) __inline__ __attribute__((visibility("default"))) float _ZSt9nextafterff(float, float);
+# 80 "00_cuTest.cu"
+static  __shared__  __var_used__ float _ZZ9SGEMM_v26PfS_S_E6A_part[2][16][128];
+# 80 "00_cuTest.cu"
+static  __shared__  __var_used__ float _ZZ9SGEMM_v26PfS_S_E6B_part[2][16][128];
+#include "common_functions.h"
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+# 109 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) __inline__ enum cudaError __cudaCDP2Malloc(
+# 109 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+void **p, 
+# 109 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+size_t s){
+# 110 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+{
+# 111 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+return cudaErrorUnknown;
+# 112 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+}}
+# 378 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) __inline__ enum cudaError _ZN43_INTERNAL_8af6a8fc_12_00_cuTest_cu_a311767b16cudaGetLastErrorEv(void){
+# 379 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+{
+# 380 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+return __cudaCDP2GetLastError();
+# 381 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+}}
+# 388 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) __inline__ const char *_ZN43_INTERNAL_8af6a8fc_12_00_cuTest_cu_a311767b18cudaGetErrorStringE9cudaError(
+# 388 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+enum cudaError error){
+# 389 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+{
+# 390 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+return __cudaCDP2GetErrorString(error);
+# 391 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+}}
+# 463 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) __inline__ enum cudaError _ZN43_INTERNAL_8af6a8fc_12_00_cuTest_cu_a311767b8cudaFreeEPv(
+# 463 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+void *devPtr){
+# 464 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+{
+# 465 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+return __cudaCDP2Free(devPtr);
+# 466 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+}}
+# 468 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) __inline__ enum cudaError _ZN43_INTERNAL_8af6a8fc_12_00_cuTest_cu_a311767b10cudaMallocEPPvm(
+# 468 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+void **devPtr, 
+# 468 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+size_t size){
+# 469 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+{  void **__T0;
+ size_t __T1;
+# 470 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+return ((__T0 = devPtr) , (void)(__T1 = size)) , (__cudaCDP2Malloc(__T0, __T1));
+# 471 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+}}
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+# 730 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+___device__(static  __no_sc__) __inline__ enum cudaError _ZN43_INTERNAL_8af6a8fc_12_00_cuTest_cu_a311767b10cudaMallocIfEE9cudaErrorPPT_m(
+# 731 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+float **devPtr, 
+# 732 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+size_t size){
+# 734 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+{  void **__T2;
+ size_t __T3;
+# 735 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+return ((__T2 = ((void **)((void *)devPtr))) , (void)(__T3 = size)) , (_ZN43_INTERNAL_8af6a8fc_12_00_cuTest_cu_a311767b10cudaMallocEPPvm(__T2, __T3));
+# 736 "/usr/local/cuda-12.1/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+}}
+# 19 "../Common.cuh"
+__global__ __var_used__ void _Z6vecAddPfS_S_(
+# 19 "../Common.cuh"
+float *A, 
+# 19 "../Common.cuh"
+float *B, 
+# 19 "../Common.cuh"
+float *C){
+# 19 "../Common.cuh"
+{
+# 20 "../Common.cuh"
+ int __cuda_local_var_35191_9_non_const_idx;
+# 20 "../Common.cuh"
+__cuda_local_var_35191_9_non_const_idx = ((int)(threadIdx.x));
+# 21 "../Common.cuh"
+(C[__cuda_local_var_35191_9_non_const_idx]) = ((A[__cuda_local_var_35191_9_non_const_idx]) + (B[__cuda_local_var_35191_9_non_const_idx])); 
+# 22 "../Common.cuh"
+}}
+# 79 "00_cuTest.cu"
+__global__ __var_used__ void _Z9SGEMM_v26PfS_S_(
+# 79 "00_cuTest.cu"
+float *A, 
+# 79 "00_cuTest.cu"
+float *B, 
+# 79 "00_cuTest.cu"
+float *C){
+# 79 "00_cuTest.cu"
+{
+# 82 "00_cuTest.cu"
+ float __cuda_local_var_82968_11_non_const_A_trans_reg[8];
+# 84 "00_cuTest.cu"
+ float __cuda_local_var_82970_11_non_const_A_part_reg[2][8];
+# 85 "00_cuTest.cu"
+ float __cuda_local_var_82971_11_non_const_B_part_reg[2][8];
+# 86 "00_cuTest.cu"
+ float __cuda_local_var_82972_11_non_const_C_part_reg[8][8];
+# 95 "00_cuTest.cu"
+ size_t __cuda_local_var_82981_12_non_const_tix;
+# 96 "00_cuTest.cu"
+ size_t __cuda_local_var_82982_12_non_const_bix;
+# 96 "00_cuTest.cu"
+ size_t __cuda_local_var_82982_30_non_const_biy;
+# 97 "00_cuTest.cu"
+ size_t __cuda_local_var_82983_12_non_const_warp_id;
+# 98 "00_cuTest.cu"
+ size_t __cuda_local_var_82984_12_non_const_lane_id;
+# 100 "00_cuTest.cu"
+ size_t __cuda_local_var_82986_12_non_const_A_lds_x;
+# 102 "00_cuTest.cu"
+ size_t __cuda_local_var_82988_12_non_const_B_lds_x;
+# 104 "00_cuTest.cu"
+ size_t __cuda_local_var_82990_12_non_const_num_loops_shared;
+# 105 "00_cuTest.cu"
+ size_t __cuda_local_var_82991_12_non_const_num_loops_regs;
+# 108 "00_cuTest.cu"
+ size_t __cuda_local_var_82994_12_non_const_A_ldg_y_stride;
+# 122 "00_cuTest.cu"
+ size_t __cuda_local_var_83008_12_non_const_B_ldg_y_stride;
+# 88 "00_cuTest.cu"
+{
+# 88 "00_cuTest.cu"
+ size_t i;
+# 88 "00_cuTest.cu"
+i = 0UL;
+# 88 "00_cuTest.cu"
+
+#pragma unroll 2147483647
+for (; (i < 8UL); i++)
+# 88 "00_cuTest.cu"
+{
+# 90 "00_cuTest.cu"
+{
+# 90 "00_cuTest.cu"
+ size_t j;
+# 90 "00_cuTest.cu"
+j = 0UL;
+# 90 "00_cuTest.cu"
+
+#pragma unroll 2147483647
+for (; (j < 8UL); j++)
+# 90 "00_cuTest.cu"
+{
+# 91 "00_cuTest.cu"
+((((__cuda_local_var_82972_11_non_const_C_part_reg)[i]))[j]) = (0.0F);
+# 92 "00_cuTest.cu"
+} }
+# 93 "00_cuTest.cu"
+} }
+# 95 "00_cuTest.cu"
+__cuda_local_var_82981_12_non_const_tix = ((size_t)(threadIdx.x));
+# 96 "00_cuTest.cu"
+__cuda_local_var_82982_12_non_const_bix = ((size_t)(blockIdx.x));
+# 96 "00_cuTest.cu"
+__cuda_local_var_82982_30_non_const_biy = ((size_t)(blockIdx.y));
+# 97 "00_cuTest.cu"
+__cuda_local_var_82983_12_non_const_warp_id = (__cuda_local_var_82981_12_non_const_tix / 32UL);
+# 98 "00_cuTest.cu"
+__cuda_local_var_82984_12_non_const_lane_id = (__cuda_local_var_82981_12_non_const_tix % 32UL);
+# 100 "00_cuTest.cu"
+__cuda_local_var_82986_12_non_const_A_lds_x = (((__cuda_local_var_82983_12_non_const_warp_id >> 2) << 5) | ((__cuda_local_var_82984_12_non_const_lane_id & 14UL) << 1));
+# 102 "00_cuTest.cu"
+__cuda_local_var_82988_12_non_const_B_lds_x = ((((__cuda_local_var_82983_12_non_const_warp_id & 3UL) << 4) | ((__cuda_local_var_82984_12_non_const_lane_id >> 4) << 3)) | ((__cuda_local_var_82984_12_non_const_lane_id & 1UL) << 2));
+# 104 "00_cuTest.cu"
+__cuda_local_var_82990_12_non_const_num_loops_shared = 128UL;
+# 105 "00_cuTest.cu"
+__cuda_local_var_82991_12_non_const_num_loops_regs = 16UL;
+# 108 "00_cuTest.cu"
+__cuda_local_var_82994_12_non_const_A_ldg_y_stride = 64UL;
+# 110 "00_cuTest.cu"
+{
+# 110 "00_cuTest.cu"
+ size_t ldg_cnt;
+# 110 "00_cuTest.cu"
+ldg_cnt = 0UL;
+# 110 "00_cuTest.cu"
+
+#pragma unroll 2147483647
+for (; (ldg_cnt < 128UL); ldg_cnt += __cuda_local_var_82994_12_non_const_A_ldg_y_stride)
+# 110 "00_cuTest.cu"
+{
+# 111 "00_cuTest.cu"
+ size_t __cuda_local_var_82997_16_non_const_A_ldg_y;
+# 112 "00_cuTest.cu"
+ size_t __cuda_local_var_82998_16_non_const_A_ldg_x;
+# 113 "00_cuTest.cu"
+ size_t __cuda_local_var_82999_16_non_const_A_sts_trans_x;
+# 114 "00_cuTest.cu"
+ size_t __cuda_local_var_83000_16_non_const_A_sts_trans_y;
+# 115 "00_cuTest.cu"
+ size_t __cuda_local_var_83001_16_non_const_A_trans_reg_idx;
+# 111 "00_cuTest.cu"
+__cuda_local_var_82997_16_non_const_A_ldg_y = (((__cuda_local_var_82982_30_non_const_biy * 128UL) + ldg_cnt) + ((__cuda_local_var_82981_12_non_const_tix << 2) / 16UL));
+# 112 "00_cuTest.cu"
+__cuda_local_var_82998_16_non_const_A_ldg_x = ((__cuda_local_var_82981_12_non_const_tix << 2) % 16UL);
+# 113 "00_cuTest.cu"
+__cuda_local_var_82999_16_non_const_A_sts_trans_x = (ldg_cnt + ((__cuda_local_var_82981_12_non_const_tix << 2) / 16UL));
+# 114 "00_cuTest.cu"
+__cuda_local_var_83000_16_non_const_A_sts_trans_y = ((__cuda_local_var_82981_12_non_const_tix << 2) % 16UL);
+# 115 "00_cuTest.cu"
+__cuda_local_var_83001_16_non_const_A_trans_reg_idx = ((ldg_cnt / __cuda_local_var_82994_12_non_const_A_ldg_y_stride) * 4UL);
+# 116 "00_cuTest.cu"
+(((struct float4 *)((__cuda_local_var_82968_11_non_const_A_trans_reg) + __cuda_local_var_83001_16_non_const_A_trans_reg_idx))[0]) = (((struct float4 *)(A + ((__cuda_local_var_82997_16_non_const_A_ldg_y * 2048UL) + __cuda_local_var_82998_16_non_const_A_ldg_x)))[0]);
+# 117 "00_cuTest.cu"
+((((((_ZZ9SGEMM_v26PfS_S_E6A_part)[0]))[__cuda_local_var_83000_16_non_const_A_sts_trans_y]))[__cuda_local_var_82999_16_non_const_A_sts_trans_x]) = ((__cuda_local_var_82968_11_non_const_A_trans_reg)[__cuda_local_var_83001_16_non_const_A_trans_reg_idx]);
+# 118 "00_cuTest.cu"
+((((((_ZZ9SGEMM_v26PfS_S_E6A_part)[0]))[(__cuda_local_var_83000_16_non_const_A_sts_trans_y + 1UL)]))[__cuda_local_var_82999_16_non_const_A_sts_trans_x]) = ((__cuda_local_var_82968_11_non_const_A_trans_reg)[(__cuda_local_var_83001_16_non_const_A_trans_reg_idx + 1UL)]);
+# 119 "00_cuTest.cu"
+((((((_ZZ9SGEMM_v26PfS_S_E6A_part)[0]))[(__cuda_local_var_83000_16_non_const_A_sts_trans_y + 2UL)]))[__cuda_local_var_82999_16_non_const_A_sts_trans_x]) = ((__cuda_local_var_82968_11_non_const_A_trans_reg)[(__cuda_local_var_83001_16_non_const_A_trans_reg_idx + 2UL)]);
+# 120 "00_cuTest.cu"
+((((((_ZZ9SGEMM_v26PfS_S_E6A_part)[0]))[(__cuda_local_var_83000_16_non_const_A_sts_trans_y + 3UL)]))[__cuda_local_var_82999_16_non_const_A_sts_trans_x]) = ((__cuda_local_var_82968_11_non_const_A_trans_reg)[(__cuda_local_var_83001_16_non_const_A_trans_reg_idx + 3UL)]);
+# 121 "00_cuTest.cu"
+} }
+# 122 "00_cuTest.cu"
+__cuda_local_var_83008_12_non_const_B_ldg_y_stride = 8UL;
+# 124 "00_cuTest.cu"
+{
+# 124 "00_cuTest.cu"
+ size_t ldg_cnt;
+# 124 "00_cuTest.cu"
+ldg_cnt = 0UL;
+# 124 "00_cuTest.cu"
+
+#pragma unroll 2147483647
+for (; (ldg_cnt < 16UL); ldg_cnt += __cuda_local_var_83008_12_non_const_B_ldg_y_stride)
+# 124 "00_cuTest.cu"
+{
+# 125 "00_cuTest.cu"
+ size_t __cuda_local_var_83011_16_non_const_B_ldg_y;
+# 126 "00_cuTest.cu"
+ size_t __cuda_local_var_83012_16_non_const_B_ldg_x;
+# 127 "00_cuTest.cu"
+ size_t __cuda_local_var_83013_16_non_const_B_sts_y;
+# 128 "00_cuTest.cu"
+ size_t __cuda_local_var_83014_16_non_const_B_sts_x;
+# 125 "00_cuTest.cu"
+__cuda_local_var_83011_16_non_const_B_ldg_y = (ldg_cnt + ((__cuda_local_var_82981_12_non_const_tix << 2) / 128UL));
+# 126 "00_cuTest.cu"
+__cuda_local_var_83012_16_non_const_B_ldg_x = ((__cuda_local_var_82982_12_non_const_bix * 128UL) + ((__cuda_local_var_82981_12_non_const_tix << 2) % 128UL));
+# 127 "00_cuTest.cu"
+__cuda_local_var_83013_16_non_const_B_sts_y = (ldg_cnt + ((__cuda_local_var_82981_12_non_const_tix << 2) / 128UL));
+# 128 "00_cuTest.cu"
+__cuda_local_var_83014_16_non_const_B_sts_x = ((__cuda_local_var_82981_12_non_const_tix << 2) % 128UL);
+# 129 "00_cuTest.cu"
+(((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6B_part)[0]))[__cuda_local_var_83013_16_non_const_B_sts_y])) + __cuda_local_var_83014_16_non_const_B_sts_x))[0]) = (((struct float4 *)(B + ((__cuda_local_var_83011_16_non_const_B_ldg_y * 4096UL) + __cuda_local_var_83012_16_non_const_B_ldg_x)))[0]);
+# 130 "00_cuTest.cu"
+} }
+# 132 "00_cuTest.cu"
+__syncthreads();
+# 134 "00_cuTest.cu"
+{
+# 134 "00_cuTest.cu"
+ size_t i;
+# 134 "00_cuTest.cu"
+i = 1UL;
+# 134 "00_cuTest.cu"
+for (; (i < __cuda_local_var_82990_12_non_const_num_loops_shared); i++)
+# 134 "00_cuTest.cu"
+{
+# 137 "00_cuTest.cu"
+{
+# 137 "00_cuTest.cu"
+ size_t ldg_cnt;
+# 137 "00_cuTest.cu"
+ldg_cnt = 0UL;
+# 137 "00_cuTest.cu"
+
+#pragma unroll 2147483647
+for (; (ldg_cnt < 128UL); ldg_cnt += __cuda_local_var_82994_12_non_const_A_ldg_y_stride)
+# 137 "00_cuTest.cu"
+{
+# 138 "00_cuTest.cu"
+ size_t __cuda_local_var_83024_20_non_const_A_ldg_y;
+# 139 "00_cuTest.cu"
+ size_t __cuda_local_var_83025_20_non_const_A_ldg_x;
+# 140 "00_cuTest.cu"
+ size_t __cuda_local_var_83026_20_non_const_A_sts_trans_x;
+# 141 "00_cuTest.cu"
+ size_t __cuda_local_var_83027_20_non_const_A_sts_trans_y;
+# 142 "00_cuTest.cu"
+ size_t __cuda_local_var_83028_20_non_const_A_trans_reg_idx;
+# 138 "00_cuTest.cu"
+__cuda_local_var_83024_20_non_const_A_ldg_y = (((__cuda_local_var_82982_30_non_const_biy * 128UL) + ldg_cnt) + ((__cuda_local_var_82981_12_non_const_tix << 2) / 16UL));
+# 139 "00_cuTest.cu"
+__cuda_local_var_83025_20_non_const_A_ldg_x = ((i * 16UL) + ((__cuda_local_var_82981_12_non_const_tix << 2) % 16UL));
+# 140 "00_cuTest.cu"
+__cuda_local_var_83026_20_non_const_A_sts_trans_x = (ldg_cnt + ((__cuda_local_var_82981_12_non_const_tix << 2) / 16UL));
+# 141 "00_cuTest.cu"
+__cuda_local_var_83027_20_non_const_A_sts_trans_y = ((__cuda_local_var_82981_12_non_const_tix << 2) % 16UL);
+# 142 "00_cuTest.cu"
+__cuda_local_var_83028_20_non_const_A_trans_reg_idx = ((ldg_cnt / __cuda_local_var_82994_12_non_const_A_ldg_y_stride) * 4UL);
+# 143 "00_cuTest.cu"
+(((struct float4 *)((__cuda_local_var_82968_11_non_const_A_trans_reg) + __cuda_local_var_83028_20_non_const_A_trans_reg_idx))[0]) = (((struct float4 *)(A + ((__cuda_local_var_83024_20_non_const_A_ldg_y * 2048UL) + __cuda_local_var_83025_20_non_const_A_ldg_x)))[0]);
+# 144 "00_cuTest.cu"
+((((((_ZZ9SGEMM_v26PfS_S_E6A_part)[(i % 2UL)]))[__cuda_local_var_83027_20_non_const_A_sts_trans_y]))[__cuda_local_var_83026_20_non_const_A_sts_trans_x]) = ((__cuda_local_var_82968_11_non_const_A_trans_reg)[__cuda_local_var_83028_20_non_const_A_trans_reg_idx]);
+# 145 "00_cuTest.cu"
+((((((_ZZ9SGEMM_v26PfS_S_E6A_part)[(i % 2UL)]))[(__cuda_local_var_83027_20_non_const_A_sts_trans_y + 1UL)]))[__cuda_local_var_83026_20_non_const_A_sts_trans_x]) = ((__cuda_local_var_82968_11_non_const_A_trans_reg)[(__cuda_local_var_83028_20_non_const_A_trans_reg_idx + 1UL)]);
+# 146 "00_cuTest.cu"
+((((((_ZZ9SGEMM_v26PfS_S_E6A_part)[(i % 2UL)]))[(__cuda_local_var_83027_20_non_const_A_sts_trans_y + 2UL)]))[__cuda_local_var_83026_20_non_const_A_sts_trans_x]) = ((__cuda_local_var_82968_11_non_const_A_trans_reg)[(__cuda_local_var_83028_20_non_const_A_trans_reg_idx + 2UL)]);
+# 147 "00_cuTest.cu"
+((((((_ZZ9SGEMM_v26PfS_S_E6A_part)[(i % 2UL)]))[(__cuda_local_var_83027_20_non_const_A_sts_trans_y + 3UL)]))[__cuda_local_var_83026_20_non_const_A_sts_trans_x]) = ((__cuda_local_var_82968_11_non_const_A_trans_reg)[(__cuda_local_var_83028_20_non_const_A_trans_reg_idx + 3UL)]);
+# 148 "00_cuTest.cu"
+} }
+# 150 "00_cuTest.cu"
+{
+# 150 "00_cuTest.cu"
+ size_t ldg_cnt;
+# 150 "00_cuTest.cu"
+ldg_cnt = 0UL;
+# 150 "00_cuTest.cu"
+
+#pragma unroll 2147483647
+for (; (ldg_cnt < 16UL); ldg_cnt += __cuda_local_var_83008_12_non_const_B_ldg_y_stride)
+# 150 "00_cuTest.cu"
+{
+# 151 "00_cuTest.cu"
+ size_t __cuda_local_var_83037_20_non_const_B_ldg_y;
+# 152 "00_cuTest.cu"
+ size_t __cuda_local_var_83038_20_non_const_B_ldg_x;
+# 153 "00_cuTest.cu"
+ size_t __cuda_local_var_83039_20_non_const_B_sts_y;
+# 154 "00_cuTest.cu"
+ size_t __cuda_local_var_83040_20_non_const_B_sts_x;
+# 151 "00_cuTest.cu"
+__cuda_local_var_83037_20_non_const_B_ldg_y = (((i * 16UL) + ldg_cnt) + ((__cuda_local_var_82981_12_non_const_tix << 2) / 128UL));
+# 152 "00_cuTest.cu"
+__cuda_local_var_83038_20_non_const_B_ldg_x = ((__cuda_local_var_82982_12_non_const_bix * 128UL) + ((__cuda_local_var_82981_12_non_const_tix << 2) % 128UL));
+# 153 "00_cuTest.cu"
+__cuda_local_var_83039_20_non_const_B_sts_y = (ldg_cnt + ((__cuda_local_var_82981_12_non_const_tix << 2) / 128UL));
+# 154 "00_cuTest.cu"
+__cuda_local_var_83040_20_non_const_B_sts_x = ((__cuda_local_var_82981_12_non_const_tix << 2) % 128UL);
+# 155 "00_cuTest.cu"
+(((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6B_part)[(i % 2UL)]))[__cuda_local_var_83039_20_non_const_B_sts_y])) + __cuda_local_var_83040_20_non_const_B_sts_x))[0]) = (((struct float4 *)(B + ((__cuda_local_var_83037_20_non_const_B_ldg_y * 4096UL) + __cuda_local_var_83038_20_non_const_B_ldg_x)))[0]);
+# 156 "00_cuTest.cu"
+} }
+# 160 "00_cuTest.cu"
+(((struct float4 *)((((__cuda_local_var_82970_11_non_const_A_part_reg)[0])) + 0))[0]) = (((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6A_part)[((i - 1UL) % 2UL)]))[0])) + __cuda_local_var_82986_12_non_const_A_lds_x))[0]);
+# 161 "00_cuTest.cu"
+(((struct float4 *)((((__cuda_local_var_82970_11_non_const_A_part_reg)[0])) + 4))[0]) = (((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6A_part)[((i - 1UL) % 2UL)]))[0])) + (__cuda_local_var_82986_12_non_const_A_lds_x + 64UL)))[0]);
+# 162 "00_cuTest.cu"
+(((struct float4 *)((((__cuda_local_var_82971_11_non_const_B_part_reg)[0])) + 0))[0]) = (((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6B_part)[((i - 1UL) % 2UL)]))[0])) + __cuda_local_var_82988_12_non_const_B_lds_x))[0]);
+# 163 "00_cuTest.cu"
+(((struct float4 *)((((__cuda_local_var_82971_11_non_const_B_part_reg)[0])) + 4))[0]) = (((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6B_part)[((i - 1UL) % 2UL)]))[0])) + (__cuda_local_var_82988_12_non_const_B_lds_x + 64UL)))[0]);
+# 166 "00_cuTest.cu"
+{
+# 166 "00_cuTest.cu"
+ size_t k;
+# 166 "00_cuTest.cu"
+k = 1UL;
+# 166 "00_cuTest.cu"
+
+#pragma unroll 2147483647
+for (; (k < __cuda_local_var_82991_12_non_const_num_loops_regs); k++)
+# 166 "00_cuTest.cu"
+{
+# 168 "00_cuTest.cu"
+(((struct float4 *)((((__cuda_local_var_82970_11_non_const_A_part_reg)[(k % 2UL)])) + 0))[0]) = (((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6A_part)[((i - 1UL) % 2UL)]))[k])) + __cuda_local_var_82986_12_non_const_A_lds_x))[0]);
+# 169 "00_cuTest.cu"
+(((struct float4 *)((((__cuda_local_var_82970_11_non_const_A_part_reg)[(k % 2UL)])) + 4))[0]) = (((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6A_part)[((i - 1UL) % 2UL)]))[k])) + (__cuda_local_var_82986_12_non_const_A_lds_x + 64UL)))[0]);
+# 170 "00_cuTest.cu"
+(((struct float4 *)((((__cuda_local_var_82971_11_non_const_B_part_reg)[(k % 2UL)])) + 0))[0]) = (((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6B_part)[((i - 1UL) % 2UL)]))[k])) + __cuda_local_var_82988_12_non_const_B_lds_x))[0]);
+# 171 "00_cuTest.cu"
+(((struct float4 *)((((__cuda_local_var_82971_11_non_const_B_part_reg)[(k % 2UL)])) + 4))[0]) = (((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6B_part)[((i - 1UL) % 2UL)]))[k])) + (__cuda_local_var_82988_12_non_const_B_lds_x + 64UL)))[0]);
+# 175 "00_cuTest.cu"
+{
+# 175 "00_cuTest.cu"
+ size_t reg_cnt_a;
+# 175 "00_cuTest.cu"
+reg_cnt_a = 0UL;
+# 175 "00_cuTest.cu"
+
+#pragma unroll 2147483647
+for (; (reg_cnt_a < 4UL); reg_cnt_a++)
+# 175 "00_cuTest.cu"
+{
+# 177 "00_cuTest.cu"
+{
+# 177 "00_cuTest.cu"
+ size_t reg_cnt_b;
+# 177 "00_cuTest.cu"
+reg_cnt_b = 0UL;
+# 177 "00_cuTest.cu"
+
+#pragma unroll 2147483647
+for (; (reg_cnt_b < 4UL); reg_cnt_b++)
+# 177 "00_cuTest.cu"
+{
+# 179 "00_cuTest.cu"
+((((__cuda_local_var_82972_11_non_const_C_part_reg)[(0UL + reg_cnt_a)]))[(0UL + reg_cnt_b)]) += (((((__cuda_local_var_82970_11_non_const_A_part_reg)[((k - 1UL) % 2UL)]))[reg_cnt_a]) * ((((__cuda_local_var_82971_11_non_const_B_part_reg)[((k - 1UL) % 2UL)]))[reg_cnt_b]));
+# 180 "00_cuTest.cu"
+((((__cuda_local_var_82972_11_non_const_C_part_reg)[(0UL + reg_cnt_a)]))[(4UL + reg_cnt_b)]) += (((((__cuda_local_var_82970_11_non_const_A_part_reg)[((k - 1UL) % 2UL)]))[reg_cnt_a]) * ((((__cuda_local_var_82971_11_non_const_B_part_reg)[((k - 1UL) % 2UL)]))[(4UL + reg_cnt_b)]));
+# 181 "00_cuTest.cu"
+((((__cuda_local_var_82972_11_non_const_C_part_reg)[(4UL + reg_cnt_a)]))[(0UL + reg_cnt_b)]) += (((((__cuda_local_var_82970_11_non_const_A_part_reg)[((k - 1UL) % 2UL)]))[(4UL + reg_cnt_a)]) * ((((__cuda_local_var_82971_11_non_const_B_part_reg)[((k - 1UL) % 2UL)]))[reg_cnt_b]));
+# 182 "00_cuTest.cu"
+((((__cuda_local_var_82972_11_non_const_C_part_reg)[(4UL + reg_cnt_a)]))[(4UL + reg_cnt_b)]) += (((((__cuda_local_var_82970_11_non_const_A_part_reg)[((k - 1UL) % 2UL)]))[(4UL + reg_cnt_a)]) * ((((__cuda_local_var_82971_11_non_const_B_part_reg)[((k - 1UL) % 2UL)]))[(4UL + reg_cnt_b)]));
+# 183 "00_cuTest.cu"
+} }
+# 184 "00_cuTest.cu"
+} }
+# 185 "00_cuTest.cu"
+} }
+# 188 "00_cuTest.cu"
+{
+# 188 "00_cuTest.cu"
+ size_t reg_cnt_a;
+# 188 "00_cuTest.cu"
+reg_cnt_a = 0UL;
+# 188 "00_cuTest.cu"
+
+#pragma unroll 2147483647
+for (; (reg_cnt_a < 4UL); reg_cnt_a++)
+# 188 "00_cuTest.cu"
+{
+# 190 "00_cuTest.cu"
+{
+# 190 "00_cuTest.cu"
+ size_t reg_cnt_b;
+# 190 "00_cuTest.cu"
+reg_cnt_b = 0UL;
+# 190 "00_cuTest.cu"
+
+#pragma unroll 2147483647
+for (; (reg_cnt_b < 4UL); reg_cnt_b++)
+# 190 "00_cuTest.cu"
+{
+# 191 "00_cuTest.cu"
+((((__cuda_local_var_82972_11_non_const_C_part_reg)[(0UL + reg_cnt_a)]))[(0UL + reg_cnt_b)]) += (((((__cuda_local_var_82970_11_non_const_A_part_reg)[((__cuda_local_var_82991_12_non_const_num_loops_regs - 1UL) % 2UL)]))[reg_cnt_a]) * ((((__cuda_local_var_82971_11_non_const_B_part_reg)[((__cuda_local_var_82991_12_non_const_num_loops_regs - 1UL) % 2UL)]))[reg_cnt_b]));
+# 192 "00_cuTest.cu"
+((((__cuda_local_var_82972_11_non_const_C_part_reg)[(0UL + reg_cnt_a)]))[(4UL + reg_cnt_b)]) += (((((__cuda_local_var_82970_11_non_const_A_part_reg)[((__cuda_local_var_82991_12_non_const_num_loops_regs - 1UL) % 2UL)]))[reg_cnt_a]) * ((((__cuda_local_var_82971_11_non_const_B_part_reg)[((__cuda_local_var_82991_12_non_const_num_loops_regs - 1UL) % 2UL)]))[(4UL + reg_cnt_b)]));
+# 193 "00_cuTest.cu"
+((((__cuda_local_var_82972_11_non_const_C_part_reg)[(4UL + reg_cnt_a)]))[(0UL + reg_cnt_b)]) += (((((__cuda_local_var_82970_11_non_const_A_part_reg)[((__cuda_local_var_82991_12_non_const_num_loops_regs - 1UL) % 2UL)]))[(4UL + reg_cnt_a)]) * ((((__cuda_local_var_82971_11_non_const_B_part_reg)[((__cuda_local_var_82991_12_non_const_num_loops_regs - 1UL) % 2UL)]))[reg_cnt_b]));
+# 194 "00_cuTest.cu"
+((((__cuda_local_var_82972_11_non_const_C_part_reg)[(4UL + reg_cnt_a)]))[(4UL + reg_cnt_b)]) += (((((__cuda_local_var_82970_11_non_const_A_part_reg)[((__cuda_local_var_82991_12_non_const_num_loops_regs - 1UL) % 2UL)]))[(4UL + reg_cnt_a)]) * ((((__cuda_local_var_82971_11_non_const_B_part_reg)[((__cuda_local_var_82991_12_non_const_num_loops_regs - 1UL) % 2UL)]))[(4UL + reg_cnt_b)]));
+# 195 "00_cuTest.cu"
+} }
+# 196 "00_cuTest.cu"
+} }
+# 197 "00_cuTest.cu"
+__syncthreads();
+# 198 "00_cuTest.cu"
+} }
+# 202 "00_cuTest.cu"
+(((struct float4 *)((((__cuda_local_var_82970_11_non_const_A_part_reg)[0])) + 0))[0]) = (((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6A_part)[((__cuda_local_var_82990_12_non_const_num_loops_shared - 1UL) % 2UL)]))[0])) + __cuda_local_var_82986_12_non_const_A_lds_x))[0]);
+# 203 "00_cuTest.cu"
+(((struct float4 *)((((__cuda_local_var_82970_11_non_const_A_part_reg)[0])) + 4))[0]) = (((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6A_part)[((__cuda_local_var_82990_12_non_const_num_loops_shared - 1UL) % 2UL)]))[0])) + (__cuda_local_var_82986_12_non_const_A_lds_x + 64UL)))[0]);
+# 204 "00_cuTest.cu"
+(((struct float4 *)((((__cuda_local_var_82971_11_non_const_B_part_reg)[0])) + 0))[0]) = (((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6B_part)[((__cuda_local_var_82990_12_non_const_num_loops_shared - 1UL) % 2UL)]))[0])) + __cuda_local_var_82988_12_non_const_B_lds_x))[0]);
+# 205 "00_cuTest.cu"
+(((struct float4 *)((((__cuda_local_var_82971_11_non_const_B_part_reg)[0])) + 4))[0]) = (((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6B_part)[((__cuda_local_var_82990_12_non_const_num_loops_shared - 1UL) % 2UL)]))[0])) + (__cuda_local_var_82988_12_non_const_B_lds_x + 64UL)))[0]);
+# 208 "00_cuTest.cu"
+{
+# 208 "00_cuTest.cu"
+ size_t k;
+# 208 "00_cuTest.cu"
+k = 1UL;
+# 208 "00_cuTest.cu"
+
+#pragma unroll 2147483647
+for (; (k < __cuda_local_var_82991_12_non_const_num_loops_regs); k++)
+# 208 "00_cuTest.cu"
+{
+# 210 "00_cuTest.cu"
+(((struct float4 *)((((__cuda_local_var_82970_11_non_const_A_part_reg)[(k % 2UL)])) + 0))[0]) = (((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6A_part)[((__cuda_local_var_82990_12_non_const_num_loops_shared - 1UL) % 2UL)]))[k])) + __cuda_local_var_82986_12_non_const_A_lds_x))[0]);
+# 211 "00_cuTest.cu"
+(((struct float4 *)((((__cuda_local_var_82970_11_non_const_A_part_reg)[(k % 2UL)])) + 4))[0]) = (((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6A_part)[((__cuda_local_var_82990_12_non_const_num_loops_shared - 1UL) % 2UL)]))[k])) + (__cuda_local_var_82986_12_non_const_A_lds_x + 64UL)))[0]);
+# 212 "00_cuTest.cu"
+(((struct float4 *)((((__cuda_local_var_82971_11_non_const_B_part_reg)[(k % 2UL)])) + 0))[0]) = (((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6B_part)[((__cuda_local_var_82990_12_non_const_num_loops_shared - 1UL) % 2UL)]))[k])) + __cuda_local_var_82988_12_non_const_B_lds_x))[0]);
+# 213 "00_cuTest.cu"
+(((struct float4 *)((((__cuda_local_var_82971_11_non_const_B_part_reg)[(k % 2UL)])) + 4))[0]) = (((struct float4 *)((((((_ZZ9SGEMM_v26PfS_S_E6B_part)[((__cuda_local_var_82990_12_non_const_num_loops_shared - 1UL) % 2UL)]))[k])) + (__cuda_local_var_82988_12_non_const_B_lds_x + 64UL)))[0]);
+# 217 "00_cuTest.cu"
+{
+# 217 "00_cuTest.cu"
+ size_t reg_cnt_a;
+# 217 "00_cuTest.cu"
+reg_cnt_a = 0UL;
+# 217 "00_cuTest.cu"
+
+#pragma unroll 2147483647
+for (; (reg_cnt_a < 4UL); reg_cnt_a++)
+# 217 "00_cuTest.cu"
+{
+# 219 "00_cuTest.cu"
+{
+# 219 "00_cuTest.cu"
+ size_t reg_cnt_b;
+# 219 "00_cuTest.cu"
+reg_cnt_b = 0UL;
+# 219 "00_cuTest.cu"
+
+#pragma unroll 2147483647
+for (; (reg_cnt_b < 4UL); reg_cnt_b++)
+# 219 "00_cuTest.cu"
+{
+# 221 "00_cuTest.cu"
+((((__cuda_local_var_82972_11_non_const_C_part_reg)[reg_cnt_a]))[reg_cnt_b]) += (((((__cuda_local_var_82970_11_non_const_A_part_reg)[((k - 1UL) % 2UL)]))[reg_cnt_a]) * ((((__cuda_local_var_82971_11_non_const_B_part_reg)[((k - 1UL) % 2UL)]))[reg_cnt_b]));
+# 222 "00_cuTest.cu"
+((((__cuda_local_var_82972_11_non_const_C_part_reg)[reg_cnt_a]))[(4UL + reg_cnt_b)]) += (((((__cuda_local_var_82970_11_non_const_A_part_reg)[((k - 1UL) % 2UL)]))[reg_cnt_a]) * ((((__cuda_local_var_82971_11_non_const_B_part_reg)[((k - 1UL) % 2UL)]))[(4UL + reg_cnt_b)]));
+# 223 "00_cuTest.cu"
+((((__cuda_local_var_82972_11_non_const_C_part_reg)[(4UL + reg_cnt_a)]))[reg_cnt_b]) += (((((__cuda_local_var_82970_11_non_const_A_part_reg)[((k - 1UL) % 2UL)]))[(4UL + reg_cnt_a)]) * ((((__cuda_local_var_82971_11_non_const_B_part_reg)[((k - 1UL) % 2UL)]))[reg_cnt_b]));
+# 224 "00_cuTest.cu"
+((((__cuda_local_var_82972_11_non_const_C_part_reg)[(4UL + reg_cnt_a)]))[(4UL + reg_cnt_b)]) += (((((__cuda_local_var_82970_11_non_const_A_part_reg)[((k - 1UL) % 2UL)]))[(4UL + reg_cnt_a)]) * ((((__cuda_local_var_82971_11_non_const_B_part_reg)[((k - 1UL) % 2UL)]))[(4UL + reg_cnt_b)]));
+# 225 "00_cuTest.cu"
+} }
+# 226 "00_cuTest.cu"
+} }
+# 227 "00_cuTest.cu"
+} }
+# 230 "00_cuTest.cu"
+{
+# 230 "00_cuTest.cu"
+ size_t reg_cnt_a;
+# 230 "00_cuTest.cu"
+reg_cnt_a = 0UL;
+# 230 "00_cuTest.cu"
+
+#pragma unroll 2147483647
+for (; (reg_cnt_a < 4UL); reg_cnt_a++)
+# 230 "00_cuTest.cu"
+{
+# 232 "00_cuTest.cu"
+{
+# 232 "00_cuTest.cu"
+ size_t reg_cnt_b;
+# 232 "00_cuTest.cu"
+reg_cnt_b = 0UL;
+# 232 "00_cuTest.cu"
+
+#pragma unroll 2147483647
+for (; (reg_cnt_b < 4UL); reg_cnt_b++)
+# 232 "00_cuTest.cu"
+{
+# 233 "00_cuTest.cu"
+((((__cuda_local_var_82972_11_non_const_C_part_reg)[(0UL + reg_cnt_a)]))[(0UL + reg_cnt_b)]) += (((((__cuda_local_var_82970_11_non_const_A_part_reg)[((__cuda_local_var_82991_12_non_const_num_loops_regs - 1UL) % 2UL)]))[reg_cnt_a]) * ((((__cuda_local_var_82971_11_non_const_B_part_reg)[((__cuda_local_var_82991_12_non_const_num_loops_regs - 1UL) % 2UL)]))[reg_cnt_b]));
+# 234 "00_cuTest.cu"
+((((__cuda_local_var_82972_11_non_const_C_part_reg)[(0UL + reg_cnt_a)]))[(4UL + reg_cnt_b)]) += (((((__cuda_local_var_82970_11_non_const_A_part_reg)[((__cuda_local_var_82991_12_non_const_num_loops_regs - 1UL) % 2UL)]))[reg_cnt_a]) * ((((__cuda_local_var_82971_11_non_const_B_part_reg)[((__cuda_local_var_82991_12_non_const_num_loops_regs - 1UL) % 2UL)]))[(4UL + reg_cnt_b)]));
+# 235 "00_cuTest.cu"
+((((__cuda_local_var_82972_11_non_const_C_part_reg)[(4UL + reg_cnt_a)]))[(0UL + reg_cnt_b)]) += (((((__cuda_local_var_82970_11_non_const_A_part_reg)[((__cuda_local_var_82991_12_non_const_num_loops_regs - 1UL) % 2UL)]))[(4UL + reg_cnt_a)]) * ((((__cuda_local_var_82971_11_non_const_B_part_reg)[((__cuda_local_var_82991_12_non_const_num_loops_regs - 1UL) % 2UL)]))[reg_cnt_b]));
+# 236 "00_cuTest.cu"
+((((__cuda_local_var_82972_11_non_const_C_part_reg)[(4UL + reg_cnt_a)]))[(4UL + reg_cnt_b)]) += (((((__cuda_local_var_82970_11_non_const_A_part_reg)[((__cuda_local_var_82991_12_non_const_num_loops_regs - 1UL) % 2UL)]))[(4UL + reg_cnt_a)]) * ((((__cuda_local_var_82971_11_non_const_B_part_reg)[((__cuda_local_var_82991_12_non_const_num_loops_regs - 1UL) % 2UL)]))[(4UL + reg_cnt_b)]));
+# 237 "00_cuTest.cu"
+} }
+# 238 "00_cuTest.cu"
+} }
+# 242 "00_cuTest.cu"
+{
+# 242 "00_cuTest.cu"
+ size_t reg_cnt_a;
+# 242 "00_cuTest.cu"
+reg_cnt_a = 0UL;
+# 242 "00_cuTest.cu"
+
+#pragma unroll 2147483647
+for (; (reg_cnt_a < 4UL); reg_cnt_a++)
+# 242 "00_cuTest.cu"
+{
+# 243 "00_cuTest.cu"
+ size_t __cuda_local_var_83129_16_non_const_C_glo_y;
+# 244 "00_cuTest.cu"
+ size_t __cuda_local_var_83130_16_non_const_C_glo_x;
+# 243 "00_cuTest.cu"
+__cuda_local_var_83129_16_non_const_C_glo_y = (((__cuda_local_var_82982_30_non_const_biy * 128UL) + __cuda_local_var_82986_12_non_const_A_lds_x) + reg_cnt_a);
+# 244 "00_cuTest.cu"
+__cuda_local_var_83130_16_non_const_C_glo_x = ((__cuda_local_var_82982_12_non_const_bix * 128UL) + __cuda_local_var_82988_12_non_const_B_lds_x);
+# 245 "00_cuTest.cu"
+(((struct float4 *)(C + ((__cuda_local_var_83129_16_non_const_C_glo_y * 4096UL) + __cuda_local_var_83130_16_non_const_C_glo_x)))[0]) = (((struct float4 *)((((__cuda_local_var_82972_11_non_const_C_part_reg)[reg_cnt_a])) + 0))[0]);
+# 246 "00_cuTest.cu"
+(((struct float4 *)(C + (((__cuda_local_var_83129_16_non_const_C_glo_y * 4096UL) + __cuda_local_var_83130_16_non_const_C_glo_x) + 64UL)))[0]) = (((struct float4 *)((((__cuda_local_var_82972_11_non_const_C_part_reg)[reg_cnt_a])) + 4))[0]);
+# 247 "00_cuTest.cu"
+(((struct float4 *)(C + (((__cuda_local_var_83129_16_non_const_C_glo_y + 64UL) * 4096UL) + __cuda_local_var_83130_16_non_const_C_glo_x)))[0]) = (((struct float4 *)((((__cuda_local_var_82972_11_non_const_C_part_reg)[(4UL + reg_cnt_a)])) + 0))[0]);
+# 248 "00_cuTest.cu"
+(((struct float4 *)(C + ((((__cuda_local_var_83129_16_non_const_C_glo_y + 64UL) * 4096UL) + __cuda_local_var_83130_16_non_const_C_glo_x) + 64UL)))[0]) = (((struct float4 *)((((__cuda_local_var_82972_11_non_const_C_part_reg)[(4UL + reg_cnt_a)])) + 4))[0]);
+# 249 "00_cuTest.cu"
+} } 
+# 250 "00_cuTest.cu"
+}}
+# 241 "/usr/include/c++/11/cmath" 3
+___device__(static  __no_sc__) __inline__ __attribute__((visibility("default"))) float _ZSt4fabsf(
+# 241 "/usr/include/c++/11/cmath" 3
+float __x){
+# 242 "/usr/include/c++/11/cmath" 3
+{
+# 242 "/usr/include/c++/11/cmath" 3
+return fabsf(__x);
+# 242 "/usr/include/c++/11/cmath" 3
+}}
+# 1660 "/usr/include/c++/11/cmath" 3
+___device__(static  __no_sc__) __inline__ __attribute__((visibility("default"))) float _ZSt9nextafterff(
+# 1660 "/usr/include/c++/11/cmath" 3
+float __x, 
+# 1660 "/usr/include/c++/11/cmath" 3
+float __y){
+# 1661 "/usr/include/c++/11/cmath" 3
+{  float __T4;
+ float __T5;
+# 1661 "/usr/include/c++/11/cmath" 3
+return ((__T4 = __x) , (void)(__T5 = __y)) , (nextafterf(__T4, __T5));
+# 1661 "/usr/include/c++/11/cmath" 3
+}}
