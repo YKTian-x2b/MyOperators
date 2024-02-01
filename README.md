@@ -37,7 +37,7 @@
 4. 分块读取 globalMem->sharedMem, sharedMem->register
 5. 8\*8改4个4\*4避免register冲突
 6. 循环展开不超过L0_I-Cache大小
-7. 
+7. 共享内存广播来避免冲突
 
 
 ## 步骤

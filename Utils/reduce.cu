@@ -56,6 +56,7 @@ __global__ void addBatchSumKernelV2(T *input, TResult *result, size_t stride, si
 
 __inline__ __device__ int warpReduce(int localSum)
 {
+    // 当前线程的lane_id异或16得到的线程号的线程将以返回值的形式得到第一个参数
     localSum += __shfl_xor(localSum, 16);
     localSum += __shfl_xor(localSum, 8);
     localSum += __shfl_xor(localSum, 4);
