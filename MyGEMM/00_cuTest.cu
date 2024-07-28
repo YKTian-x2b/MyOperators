@@ -360,3 +360,5 @@ int main(){
 
 // nvcc --keep --keep-dir midRes -gencode=arch=compute_86,code=\"sm_86,compute_86\" -I/opt/kaiProjects/GEMM_kai/Utils -L /usr/local/cuda/lib64 -l cuda -l cublas -o res/00_res 00_cuTest.cu
 // cuasm --bin2asm midRes/00_cuTest.sm_86.cubin -o midRes/00_cuTest.sm_86.cuasm
+
+// nsys profile --stats=true --force-overwrite=true  -o mygemm res/00_res
