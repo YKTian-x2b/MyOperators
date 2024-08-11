@@ -15,7 +15,7 @@ import numpy as np
     key=['SEQ_LEN', 'HEAD_DIM'],
 )
 @triton.jit
-def flash_attn_fwd_v1(
+def flash_attn_fwd(
     Q, K, V, O, scale_dh: tl.float32, 
     NUM_HEAD, 
     SEQ_LEN: tl.constexpr, 
@@ -79,7 +79,7 @@ def call_triton_flash_attn_fwd(Q, K, V, BSZ, NUM_HEAD, SEQ_LEN, HEAD_DIM):
     O = torch.empty(BSZ, NUM_HEAD, SEQ_LEN, HEAD_DIM)
     scale_dh = 1.0 / (HEAD_DIM**0.5)
     grid = lambda META: (triton.cdiv(SEQ_LEN, META['BLOCK_SIZE_M']), BSZ*NUM_HEAD, 1)
-    flash_attn_fwd_v1[grid](
+    flash_attn_fwd[grid](
         Q, K, V, O, scale_dh, 
         NUM_HEAD, SEQ_LEN, HEAD_DIM,
     )
