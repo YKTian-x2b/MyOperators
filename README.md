@@ -1,4 +1,11 @@
 
+~~~bash
+docker pull registry.baidubce.com/paddlepaddle/paddle:2.6.1-gpu-cuda12.0-cudnn8.9-trt8.6
+sudo docker run --gpus all --cap-add=SYS_PTRACE --cap-add=SYS_ADMIN --name flash_decoding -v $PWD:/tyk -it paddlepaddle/paddle:2.6.1-gpu-cuda12.0-cudnn8.9-trt8.6  /bin/bash
+
+cuda12.0 paddle
+docker run --cap-add=SYS_PTRACE --cap-add=SYS_ADMIN --name flash_decoding -v $PWD:/tyk --network=host -it 4998ed39c2b8 /bin/bash
+~~~
 
 
 - 如何划分任务给block
