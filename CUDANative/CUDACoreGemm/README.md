@@ -1,32 +1,8 @@
 # SGEMM
 
-## 思路
-- regsPerBlock和regsPerSM都是65536 这些是指32bit的寄存器
-- 为了用满SM的3\*16个warp，限制一个block是32\*16个线程 一个SM启动三个block，那么一个block先用1/4regs 256*64个
-- 如果是连续两个regs存一个double的话，一个block处理256\*32个，就是16个double每线程?
-
-- smemPerBlock是49152=128\*128\*3 smemPerSM是102400=32\*32\*100 一个SM要启动三个block，一个block就用1/3smemPerSM 128*256字节
-- 限制一个block是32*16个线程 就是64字节每线程 就是8个double每线程
+![](../../assets/Maxas_sgemm_readGloabl_AB.png)
 
 
-
-#define BLOCK_XY 256
-#define SMEM_Y 128
-#define SMEM_X 16
-#define REG_Y 8
-#define REG_X REG_Y
-
-- 一个SM最多启动 3*16个warp
-- BLOCK_XY是256，8个warp。最多启动6个Block
-
-- SM限制共享内存最多100KB Block限制共享内存最多3*16KB
-- 共享内存 2\*2\*sizeof(float)\*SMEM_Y\*SMEM_X = 32K
-- 一个SM就能启动3个Block
-
-- SM一共65536个寄存器 启动2个block的话 256的block 一个线程只能用128个寄存器
-- 寄存器ABC 一共需要 (REG_Y + REG_X)\*2 + (REG_Y\*REG_X) = 96
-- A矩阵在共享内存转置的时候 还需要 (SMEM_Y * SMEM_X) / BLOCK_XY = 8个寄存器。
-- 单次寄存器只处理 4\*4的C矩阵  尽可能避免共享内存和寄存器bank冲突
 
 
 ### tips
@@ -92,7 +68,38 @@ rm -rf !(regBankTest.cu) && mkdir res
 ~~~
 
 
+
+## 早期自己的思路
+
+- regsPerBlock和regsPerSM都是65536 这些是指32bit的寄存器
+- 为了用满SM的3\*16个warp，限制一个block是32\*16个线程 一个SM启动三个block，那么一个block先用1/4regs 256*64个
+- 如果是连续两个regs存一个double的话，一个block处理256\*32个，就是16个double每线程?
+
+- smemPerBlock是49152=128\*128\*3 smemPerSM是102400=32\*32\*100 一个SM要启动三个block，一个block就用1/3smemPerSM 128*256字节
+- 限制一个block是32*16个线程 就是64字节每线程 就是8个double每线程
+
+
+
+#define BLOCK_XY 256
+#define SMEM_Y 128
+#define SMEM_X 16
+#define REG_Y 8
+#define REG_X REG_Y
+
+- 一个SM最多启动 3*16个warp
+- BLOCK_XY是256，8个warp。最多启动6个Block
+
+- SM限制共享内存最多100KB Block限制共享内存最多3*16KB
+- 共享内存 2\*2\*sizeof(float)\*SMEM_Y\*SMEM_X = 32K
+- 一个SM就能启动3个Block
+
+- SM一共65536个寄存器 启动2个block的话 256的block 一个线程只能用128个寄存器
+- 寄存器ABC 一共需要 (REG_Y + REG_X)\*2 + (REG_Y\*REG_X) = 96
+- A矩阵在共享内存转置的时候 还需要 (SMEM_Y * SMEM_X) / BLOCK_XY = 8个寄存器。
+- 单次寄存器只处理 4\*4的C矩阵  尽可能避免共享内存和寄存器bank冲突
+
 ## 其他
+
 r68 - r75   
 r76 - r91
 r12 - r23   3
