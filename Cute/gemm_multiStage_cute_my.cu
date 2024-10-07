@@ -112,13 +112,14 @@ gemm_multi_stage(void *Dptr, const void *Aptr, const void *Bptr, int m, int n,
         #pragma unroll
         for(ik = 0; ik < nk; ik++){
             int ik_next = (ik+1) % nk;
-
+            // 在进入下一个kTileK前，确保g2s完成且共享内存切换到下一个kTileK。
             if (ik == nk - 1) {
                 cp_async_wait<kStage - 2>();
                 __syncthreads();
                 ismem_read = (ismem_read + 1) % kStage;
             }
 
+            // 共享内存加载下一个mma的寄存器数据
             // shm -> reg s[itile][ik + 1] -> r[ik + 1]
             cute::copy(s2r_tiled_copy_a, tAsA(_, _, ik_next, ismem_read),
                         tCrA_view(_, _, ik_next));
