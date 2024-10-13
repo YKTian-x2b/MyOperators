@@ -1,6 +1,6 @@
-# SGEMM
+# SGEMM_CUDACore
 
-![](../../assets/Maxas_sgemm_readGloabl_AB.png)
+<img src="../../assets/Maxas_sgemm_readGloabl_AB.png"  />
 
 
 

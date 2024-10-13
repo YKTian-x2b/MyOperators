@@ -25,7 +25,7 @@ __host__ void CpuInitializeMatrix(T *matrix, int rows, int columns, int data_cas
 {
     std::default_random_engine e;
     e.seed(time(0));
-    std::uniform_real_distribution<float> u(-5.0, 5.0);
+    std::uniform_real_distribution<float> u(-1.0, 1.0);
 
     for (size_t i = 0; i < rows; i++)
     {
@@ -124,13 +124,13 @@ void GpuAllocateMatrix(T **matrix, int rows, int columns, int data_case = 0)
 
 #define VALID
 template<typename T>
-void CheckRes(const T *const res, const T *const res_ref, const int rows, const int columns){
+void CheckRes(const T *const res, const T *const res_ref, const int rows, const int columns, float atol=0.01){
     size_t err_cnt = 0;
     bool wrong = false;
     for(size_t i = 0; i < rows; i++){
         for(size_t j = 0; j < columns; j++){
             float err = res[i*columns+j] - res_ref[i*columns+j];
-            if(fabs(err) >=  0.01){
+            if(fabs(err) >=  atol){
                 err_cnt++;
                 wrong = true;
     #ifdef VALID
@@ -156,4 +156,9 @@ void PrintMatrix(T *matrix, int rows, int columns){
         std::cout << std::endl;
     }
     std::cout << std::endl;
+}
+
+__forceinline__ __host__ __device__
+int ceil_div(int a, int b) {
+  return (a + b - 1) / b;
 }
